@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  padding-left: 100px;
+  padding-right: 80px;
+  display: flex;
+  align-items: center;
+}
+.button .background {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: black;
+  border-radius: 80px;
+  left: 0;
+  transition: width 0.5s ease-in;
+  z-index: 1;
+}
+.button .ar-wrapper {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  color: black;
+  border-radius: 80px;
+  left: 0;
+  transition: width 0.5s ease-in;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.button .ar-wrapper .arrowHead {
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  color: white;
+  transform: rotate(45deg);
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-in;
+  z-index: 1;
+}
+.button .ar-wrapper .arrowBody {
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+.button span {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.15em;
+  font-weight: 800;
+  color: black;
+  transition: color 0.5s ease-in;
+  z-index: 1;
+}
+.button:hover .background {
+  width: 100%;
+}
+.button:hover .ar-wrapper .arrowHead {
+  transform: translateX(40px) rotate(45deg);
+}
+.button:hover .ar-wrapper .arrowBody {
+  transform: translateX(15px);
+  opacity: 1;
+}
+.button:hover span {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
